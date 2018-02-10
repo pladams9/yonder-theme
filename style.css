@@ -1,0 +1,41 @@
+/*
+Theme Name: Yonder Theme
+Theme URI: http://theme.on.yonder.website
+Author: Peter L. Adams
+Author URI: https://yonder.website
+Description: XXXXXXXXXXXXXXXX
+Version: 0.1
+License: GNU General Public License v3
+License URI: https://www.gnu.org/licenses/gpl-3.0.html
+Text Domain: yondertheme
+Tags: XXXXXXXXXXXXXXXXXXXX
+*/
+
+p {
+  color: blue;
+}
+
+h1, h2, h3, h4 {
+  margin: 0;
+  padding: 0;
+}
+
+#main-area {
+  width: 800px;
+  margin: 0 auto;
+}
+
+.post {
+  margin-bottom: 25px;
+  background-color: #eef;
+}
+
+.post .content {
+  padding: 15px;
+}
+
+.title {
+  padding: 5px;
+  background-color: #445;
+  color: white;
+}
