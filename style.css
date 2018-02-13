@@ -11,39 +11,14 @@ Text Domain: yondertheme
 Tags: XXXXXXXXXXXXXXXXXXXX
 */
 
-p {
-  color: blue;
+#page-middle {
+  display: flex;
 }
 
-h1, h2, h3, h4 {
-  margin: 0;
-  padding: 0;
+#main-column {
+  flex: 5;
 }
 
-#main-area {
-  width: 800px;
-  margin: 0 auto;
-}
-
-.post {
-  margin-bottom: 25px;
-  background-color: #eef;
-}
-
-.post .meta {
-  border: 1px solid black;
-}
-
-.post .content {
-  padding: 15px;
-}
-
-.title {
-  padding: 5px;
-  background-color: #445;
-  color: white;
-}
-
-.title a {
-  color: white;
+#page-sidebar {
+  flex: 2;
 }

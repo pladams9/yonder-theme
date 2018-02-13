@@ -4,27 +4,20 @@ get_header(); ?>
 
 <div id="main-column">
 
-<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
 
-  <div class="post">
-    <div class="title">
-      <h2><?php the_title(); ?></h2>
+get_template_part( 'template-parts/content', 'full' );
+
+?>
+
+    <div id="comments" class="comments">
+      <?php
+      // If comments are open or we have at least one comment, load up the comment template.
+      if ( comments_open() || get_comments_number() ) :
+        comments_template();
+      endif;
+      ?>
     </div>
-    <div class="meta">
-      <div class="author">
-        <?php the_author(); ?>
-      </div>
-      <div class="category">
-        <?php the_category(); ?>
-      </div>
-      <div class="tags">
-        <?php the_tags(); ?>
-      </div>
-    </div>
-    <div class="content">
-      <?php the_content(); ?>
-    </div>
-  </div>
 
 <?php endwhile; else : echo "Nothing here."; endif; ?>
 

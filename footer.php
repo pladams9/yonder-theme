@@ -1,10 +1,11 @@
+</div> <!-- #page-middle -->
 
-  </div> <!-- main-area -->
-  <div id="footer">
+  <footer id="page-footer">
     <div id="footer-content">
-    </div> <!-- footer-content -->
-  </div> <!-- footer -->
-</div> <!-- page -->
+    </div> <!-- #footer-content -->
+  </footer> <!-- #page-footer -->
+
+</div> <!-- #page-wrapper -->
 
 <?php wp_footer(); ?>
 
