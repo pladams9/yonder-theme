@@ -22,3 +22,43 @@ Tags: XXXXXXXXXXXXXXXXXXXX
 #page-sidebar {
   flex: 2;
 }
+
+#header-content {
+  min-height: 200px;
+  padding: 1em 3em;
+  background-size: cover;
+}
+
+img,
+.size-auto,
+.size-full,
+.size-large,
+.size-medium,
+.size-thumbnail {
+    height: auto;
+    max-width: 100%;
+  }
+
+ul.menu {
+  padding: 0;
+}
+
+.menu li {
+  display: inline-block;
+  margin: 0 0.5em;
+  border: 1px solid black;
+}
+
+.menu li a {
+  display: block;
+  min-width: 4em;
+  padding: 0.5em 1em;
+  line-height: 200%;
+  text-align: center;
+  text-decoration: none;
+}
+
+code,
+pre {
+  white-space: pre-wrap;
+}

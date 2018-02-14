@@ -1,15 +1,36 @@
 <?php
 
 /*
+ * Set $content_width
+ */
+if ( ! isset( $content_width ) ) {
+	$content_width = 600;
+}
+
+/*
  * Add stylesheets
  */
 function add_yonder_styles() {
   // Enqueue normalize.css
-  wp_enqueue_style( 'normalize', get_template_directory_uri() . "styles\normalize.css");
+  wp_enqueue_style( 'normalize', get_template_directory_uri() . "/styles/normalize.css");
   // Enqueue style.css
-  wp_enqueue_style( 'style', get_stylesheet_uri() );
+  wp_enqueue_style( 'style', get_stylesheet_uri(), array( 'normalize') );
 }
 add_action( 'wp_enqueue_scripts', 'add_yonder_styles' );
+
+/*
+ * Custom header
+ */
+function add_yonder_custom_header() {
+  $args = array(
+    'header-text' => true,
+    'default-text-color' => 'fff',
+    'width' => 1000,
+    'height' => 200
+  );
+  add_theme_support( 'custom-header', $args );
+}
+add_action( 'after_setup_theme', 'add_yonder_custom_header');
 
 
 /*

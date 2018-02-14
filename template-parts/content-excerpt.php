@@ -1,3 +1,11 @@
+<?php
+/**
+ * content-excerpt.php
+ *
+ * This is a template part. It displays excerpts of posts.
+ */
+?>
+
 <div <?php post_class(); ?>>
   <div class="title">
     <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>

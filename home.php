@@ -1,6 +1,6 @@
 <?php
 
-/*
+/**
  * home.php
  *
  * This template is used to show the main blog page, whether on the Front Page
@@ -12,15 +12,8 @@ get_header();
 ?>
 
 <!-- Currently in #page-middle -->
-  <div id="main-column">
-    <div id="secondary-menu-area">
-      <?php
-      wp_nav_menu( array(
-        'theme_location' => 'secondary-menu',
-        'container_class' => 'secondary-menu'
-      ));
-      ?>
-    </div> <!-- #secondary-menu-area -->
+<div id="main-column">
+  <?php get_template_part( 'template-parts/nav/menu', 'secondary' ); ?>
 
   <main id="page-content">
 
@@ -30,14 +23,17 @@ get_header();
     */
     if ( have_posts() ) : while ( have_posts() ) : the_post();
 
-    get_template_part( 'template-parts/content', 'full' );
+      get_template_part( 'template-parts/content', 'full' );
 
-    endwhile; else : echo "Nothing here."; endif;
+    endwhile;
+    ?>
+      <div class="pagination-nav">
+        <?php posts_nav_link(); ?>
+      </div>
+    <?php
+    else : echo "Nothing here."; endif;
     ?>
 
-    <div class="pagination-nav">
-    <?php posts_nav_link(); ?>
-    </div>
   </main> <!-- #page-content -->
 </div> <!-- #main-column -->
 

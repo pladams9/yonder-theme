@@ -1,3 +1,11 @@
+<?php
+/*
+ * content-full.php
+ *
+ * This is a template part. It displays posts with their full content.
+ */
+?>
+
 <div <?php post_class(); ?>>
   <div class="title">
     <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
