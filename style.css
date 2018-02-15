@@ -1,32 +1,62 @@
-/*
+/**
 Theme Name: Yonder Theme
 Theme URI: http://theme.on.yonder.website
 Author: Peter L. Adams
 Author URI: https://yonder.website
-Description: XXXXXXXXXXXXXXXX
+Description:
 Version: 0.1
 License: GNU General Public License v3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Text Domain: yondertheme
-Tags: XXXXXXXXXXXXXXXXXXXX
+Tags:
 */
+
+/**
+ * Color Palette
+ */
+:root {
+  --yon-color-bg: #2B3351;
+  --yon-color-outline: #3C656D;
+  --yon-color-med-1: #37AEDD;
+  --yon-color-med-2: #3988AD;
+  --yon-color-high: #F28B65
+  }
+
+body {
+  background-color: var(--yon-color-med-1);
+}
 
 #page-middle {
   display: flex;
+  min-height: 50em;
+  width: 80%;
+  margin: 0 auto;
 }
 
 #main-column {
   flex: 5;
+  margin: 0 3em;
+  background-color: var(--yon-color-med-1);
 }
 
 #page-sidebar {
+  padding: 1em;
   flex: 2;
+  background-color: var(--yon-color-med-1);
 }
 
 #header-content {
   min-height: 200px;
   padding: 1em 3em;
   background-size: cover;
+  background-color: var(--yon-color-high);
+  border-bottom: var(--yon-color-outline) solid 0.2em;
+}
+
+#footer-content {
+  min-height: 10em;
+  background-color: var(--yon-color-high);
+  border-top: var(--yon-color-outline) solid 0.2em;
 }
 
 img,
@@ -46,7 +76,8 @@ ul.menu {
 .menu li {
   display: inline-block;
   margin: 0 0.5em;
-  border: 1px solid black;
+  border: 0.1em solid var(--yon-color-outline);
+  background-color: white;
 }
 
 .menu li a {
@@ -56,9 +87,47 @@ ul.menu {
   line-height: 200%;
   text-align: center;
   text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2em;
+  color: var(--yon-color-outline);
+}
+
+.menu li:hover {
+  background-color: lightgray;
+}
+
+#primary-menu-area {
+  padding: 1em 1em;
+  border-bottom: var(--yon-color-outline) solid 0.2em;
+  background-color: white;
+}
+
+#primary-menu-area ul.menu {
+  margin: 0;
+}
+
+#secondary-menu-area {
+  padding: 1.5em 1em;
+  border-top: var(--yon-color-outline) solid 0.2em;
+  border-bottom: var(--yon-color-outline) solid 0.2em;
+  background-color: white;
+  text-align: center;
+}
+
+#secondary-menu-area ul.menu {
+  margin: 0;
 }
 
 code,
 pre {
   white-space: pre-wrap;
+}
+
+p {
+  color: var(--yon-color-bg);
+}
+
+a{
+  color: var(--yon-color-bg);
+  font-weight: bold;
 }

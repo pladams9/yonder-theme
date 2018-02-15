@@ -1,3 +1,9 @@
+<?php
+/*
+ * Not sure if I actually want to use this menun, but I won't delete it for now.
+ *
+
+
 <div id="secondary-menu-area">
   <?php
   wp_nav_menu( array(
@@ -6,3 +12,6 @@
   ));
   ?>
 </div> <!-- #secondary-menu-area -->
+
+*/
+?>
