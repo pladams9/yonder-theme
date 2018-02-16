@@ -11,19 +11,100 @@ Text Domain: yondertheme
 Tags:
 */
 
-/**
- * Color Palette
- */
+/**************
+ * 1. COLORS
+ *************/
+
+/* Color Palette */
+/* This will be replaced programatically in the theme. */
+
+/* Yonder-Warm */
+/*
 :root {
-  --yon-color-bg: #2B3351;
-  --yon-color-outline: #3C656D;
-  --yon-color-med-1: #37AEDD;
-  --yon-color-med-2: #3988AD;
-  --yon-color-high: #F28B65
-  }
+  --yon-color-near-white: #FEFCFA;
+  --yon-color-light: #E7DAD2;
+  --yon-color-med: #635658;
+  --yon-color-dark: #3D3942;
+  --yon-color-near-black: #171518;
+  --yon-color-accent: #AA5553;
+  --yon-color-mute: #94959C;
+}
+*/
+
+/* Yonder-Cool */
+:root {
+  --yon-color-near-white: #FBFBFC;
+  --yon-color-light: #E6E8EC;
+  --yon-color-med: #5F7B92;
+  --yon-color-dark: #353A47;
+  --yon-color-near-black: #14161A;
+  --yon-color-accent: #6990B5;
+  --yon-color-mute: #9C9594;
+}
+
+/* Yonder-B/W */
+/*
+:root {
+  --yon-color-near-white: #FAFAFA;
+  --yon-color-light: #EDEDED;
+  --yon-color-med: #848484;
+  --yon-color-dark: #474747;
+  --yon-color-near-black: #141414;
+  --yon-color-accent: #959595;
+  --yon-color-mute: #9B9B9B;
+}
+*/
+
+/* Defaults for IE11 */
+
+/* Background Colors */
+#page-header {
+  background-color: #959595;
+}
+
+#footer-content,
+#primary-menu-area {
+  background-color: #848484;
+}
 
 body {
-  background-color: var(--yon-color-med-1);
+  background-color: #EDEDED;
+}
+
+.menu li a {
+  background-color: #9B9B9B;
+}
+
+.menu li a:hover {
+  background-color: #474747;
+}
+
+/* Text Colors */
+body,
+p {
+  color: #474747;
+}
+
+a {
+  color: #959595;
+  text-decoration-color: #848484;
+}
+
+.menu li a {
+  color: #FAFAFA;
+}
+
+.menu li a:hover {
+  color: #9B9B9B;
+}
+
+/*******************
+ * 2. PAGE LAYOUT
+ ******************/
+
+#header-content {
+  min-height: 200px;
+  padding: 2em 1em 0 3em;
 }
 
 #page-middle {
@@ -31,32 +112,77 @@ body {
   min-height: 50em;
   width: 80%;
   margin: 0 auto;
+  padding: 2em 0;
 }
 
 #main-column {
   flex: 5;
   margin: 0 3em;
-  background-color: var(--yon-color-med-1);
 }
 
 #page-sidebar {
-  padding: 1em;
   flex: 2;
-  background-color: var(--yon-color-med-1);
-}
-
-#header-content {
-  min-height: 200px;
-  padding: 1em 3em;
-  background-size: cover;
-  background-color: var(--yon-color-high);
-  border-bottom: var(--yon-color-outline) solid 0.2em;
 }
 
 #footer-content {
   min-height: 10em;
-  background-color: var(--yon-color-high);
-  border-top: var(--yon-color-outline) solid 0.2em;
+}
+
+/*********************
+ * 3. LAYOUT BLOCKS
+ ********************/
+
+#page-header {
+  background-color: var(--yon-color-accent);
+}
+
+#header-content {
+  background-size: cover;
+}
+
+#footer-content {
+  background-color: var(--yon-color-med);
+}
+
+#primary-menu-area {
+  padding: 1em 1em;
+  background-color: var(--yon-color-med);
+}
+
+#primary-menu-area ul.menu {
+  margin: 0;
+}
+
+/*********************
+ * 4. BASE ELEMENTS
+ ********************/
+
+body {
+  background-color: var(--yon-color-light);
+  color: var(--yon-color-dark);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+}
+
+p {
+  color: var(--yon-color-dark);
+}
+
+a{
+  color: var(--yon-color-accent);
+  text-decoration: underline;
+  text-decoration-color: var(--yon-color-med);
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+code,
+pre {
+  white-space: pre-wrap;
 }
 
 img,
@@ -65,9 +191,13 @@ img,
 .size-large,
 .size-medium,
 .size-thumbnail {
-    height: auto;
-    max-width: 100%;
-  }
+  height: auto;
+  max-width: 100%;
+}
+
+/**************************
+ * 5. RE-USABLE ELEMENTS
+ *************************/
 
 ul.menu {
   padding: 0;
@@ -76,8 +206,6 @@ ul.menu {
 .menu li {
   display: inline-block;
   margin: 0 0.5em;
-  border: 0.1em solid var(--yon-color-outline);
-  background-color: white;
 }
 
 .menu li a {
@@ -89,45 +217,11 @@ ul.menu {
   text-decoration: none;
   font-weight: bold;
   font-size: 1.2em;
-  color: var(--yon-color-outline);
+  background-color: var(--yon-color-mute);
+  color: var(--yon-color-near-white);
 }
 
-.menu li:hover {
-  background-color: lightgray;
-}
-
-#primary-menu-area {
-  padding: 1em 1em;
-  border-bottom: var(--yon-color-outline) solid 0.2em;
-  background-color: white;
-}
-
-#primary-menu-area ul.menu {
-  margin: 0;
-}
-
-#secondary-menu-area {
-  padding: 1.5em 1em;
-  border-top: var(--yon-color-outline) solid 0.2em;
-  border-bottom: var(--yon-color-outline) solid 0.2em;
-  background-color: white;
-  text-align: center;
-}
-
-#secondary-menu-area ul.menu {
-  margin: 0;
-}
-
-code,
-pre {
-  white-space: pre-wrap;
-}
-
-p {
-  color: var(--yon-color-bg);
-}
-
-a{
-  color: var(--yon-color-bg);
-  font-weight: bold;
+.menu li a:hover {
+  background-color: var(--yon-color-dark);
+  color: var(--yon-color-mute);
 }
