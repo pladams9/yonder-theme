@@ -1,13 +1,13 @@
 /**
-Theme Name: Yonder Theme
+Theme Name: Yonder
 Theme URI: http://theme.on.yonder.website
 Author: Peter L. Adams
 Author URI: https://yonder.website
 Description:
-Version: 0.1
+Version: 0.2.3
 License: GNU General Public License v3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
-Text Domain: yondertheme
+Text Domain: yonder
 Tags:
 */
 
@@ -104,6 +104,7 @@ a {
 
 #header-content {
   min-height: 200px;
+  overflow: auto;
   padding: 2em 1em 0 3em;
 }
 
@@ -205,6 +206,7 @@ ul.menu {
 
 .menu li {
   display: inline-block;
+  position: relative;
   margin: 0 0.5em;
 }
 
@@ -219,9 +221,39 @@ ul.menu {
   font-size: 1.2em;
   background-color: var(--yon-color-mute);
   color: var(--yon-color-near-white);
+  white-space: nowrap;
 }
 
-.menu li a:hover {
+.menu li:hover > a {
   background-color: var(--yon-color-dark);
   color: var(--yon-color-mute);
+}
+
+.sub-menu {
+  display: none;
+  position: absolute;
+  left: 0;
+  overflow: visible;
+  min-width: 100%;
+}
+
+.menu li:hover > .sub-menu {
+  display: inherit;
+}
+
+.menu .sub-menu li {
+  position: relative;
+  width: 100%;
+  left: -3em;
+}
+
+.sub-menu li a {
+  font-size: 90%;
+  text-align: left;
+}
+
+.menu .sub-menu .sub-menu {
+  position: absolute;
+  left: 100%;
+  top: 0;
 }
